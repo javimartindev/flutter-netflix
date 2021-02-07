@@ -52,7 +52,8 @@ class _MyAppState extends State<MainPoster> {
     return Column(
       children: <Widget>[
         this.header(),
-        this.subheader()
+        this.subheader(),
+        this.listButtons()
       ],
     );
   }
@@ -139,5 +140,53 @@ class _MyAppState extends State<MainPoster> {
     } else {
       return <Widget>[];
     }
+  }
+
+  listButtons() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 15.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Column(
+            children: [
+              Icon(Icons.check, color: Colors.white),
+              SizedBox(
+                height: 3.0
+              ),
+              Text(
+                'My List', 
+                style: TextStyle(color: Colors.white,
+                fontSize: 10.0
+                )
+              )
+            ],
+          ),
+          FlatButton.icon(
+            onPressed: () {},
+            color: Colors.white,
+            icon: Icon(
+              Icons.play_arrow,
+              color: Colors.black,
+            ),
+            label: Text('Play'),
+          ),
+          Column(
+            children: [
+              Icon(Icons.info_outline, color: Colors.white),
+              SizedBox(
+                height: 3.0
+              ),
+              Text(
+                'Info', 
+                style: TextStyle(color: Colors.white,
+                fontSize: 10.0
+                )
+              )
+            ],
+          ),
+        ]
+      ),
+    );
   }
 }

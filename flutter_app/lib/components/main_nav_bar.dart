@@ -12,19 +12,19 @@ class MainNavBar extends StatelessWidget {
           width: 30.0,
         ),
         Text(
-          'Programas',
+          'TV Shows',
           style: TextStyle(
             color: Colors.white,
             fontSize: 16.0),
         ),
         Text(
-          'Peliculas',
+          'Movies',
           style: TextStyle(
             color: Colors.white,
             fontSize: 16.0),
         ),
         Text(
-          'Mi lista',
+          'My List',
           style: TextStyle(
             color: Colors.white,
             fontSize: 16.0),
